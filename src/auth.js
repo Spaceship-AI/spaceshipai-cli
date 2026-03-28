@@ -2,7 +2,7 @@ import { createServer } from 'http'
 import { randomBytes } from 'crypto'
 import { execSync } from 'child_process'
 
-const DASHBOARD_URL = 'https://spaceship-ai.fly.dev'
+const DASHBOARD_URL = process.env.SPACESHIP_BASE_URL || 'https://spaceshipai.io'
 const TIMEOUT_MS = 120_000
 
 function openBrowser(url) {
