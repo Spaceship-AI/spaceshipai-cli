@@ -1,0 +1,26 @@
+{
+  "name": "spaceshipai",
+  "version": "0.1.1",
+  "description": "Spaceship AI CLI — connect your AI coding tools, manage agents, and more",
+  "type": "module",
+  "bin": {
+    "spaceshipai": "bin/init.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "spaceship",
+    "ai",
+    "mcp",
+    "agents",
+    "claude",
+    "cursor"
+  ],
+  "license": "MIT",
+  "homepage": "https://spaceshipai.io",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Spaceship-AI/spaceshipai-cli.git"
+  }
+}
