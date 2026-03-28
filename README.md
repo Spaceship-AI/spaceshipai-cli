@@ -5,12 +5,10 @@ Install the [Spaceship AI](https://spaceshipai.io) MCP server into every AI codi
 ## Quick start
 
 ```bash
-SPACESHIP_API_KEY=sk_live_... npx spaceshipai@latest init
+npx spaceshipai@latest init
 ```
 
-Detects and installs to **Claude Code**, **Cursor**, **VS Code**, and **Windsurf** — whichever you have installed.
-
-Get your API key from the [Spaceship dashboard](https://spaceshipai.io).
+Opens your browser to sign in and authorize the CLI — no API key copying required. Detects and installs to **Claude Code**, **Cursor**, **VS Code**, and **Windsurf** — whichever you have installed.
 
 ## What it does
 
