@@ -26,8 +26,14 @@ function writeJsonFile(path, data) {
 }
 
 export function installClaudeCode(key) {
+  // Remove any existing project-scoped entry before adding user-scoped one
+  try {
+    execSync('claude mcp remove spaceship', { stdio: 'ignore' })
+  } catch {
+    // Not present — that's fine
+  }
   execSync(
-    `claude mcp add --transport stdio spaceship --env SPACESHIP_API_KEY=${key} -- uvx spaceship-mcp`,
+    `claude mcp add --scope user --transport stdio spaceship --env SPACESHIP_API_KEY=${key} -- uvx spaceship-mcp`,
     { stdio: 'ignore' }
   )
 }

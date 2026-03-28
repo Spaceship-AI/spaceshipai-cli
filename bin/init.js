@@ -7,7 +7,7 @@ import {
   installVscode,
   installWindsurf,
 } from '../src/install.js'
-import { promptApiKey } from '../src/prompt.js'
+import { authenticateViaBrowser } from '../src/auth.js'
 
 const TEAL  = '\x1b[36m'
 const GREEN = '\x1b[32m'
@@ -18,15 +18,10 @@ const RESET = '\x1b[0m'
 async function main() {
   console.log(`\n${BOLD}${TEAL}Spaceship AI${RESET} — MCP installer\n`)
 
-  // Resolve API key: env var → prompt
+  // Resolve API key: env var → browser OAuth flow
   let apiKey = process.env.SPACESHIP_API_KEY
   if (!apiKey) {
-    apiKey = await promptApiKey()
-  }
-
-  if (!apiKey || !apiKey.startsWith('sk_')) {
-    console.error('\nInvalid API key. Keys must start with sk_live_ or sk_test_.')
-    process.exit(1)
+    apiKey = await authenticateViaBrowser()
   }
 
   // Detect installed tools
