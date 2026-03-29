@@ -10,21 +10,6 @@ npx spaceshipai@latest init
 
 Opens your browser to sign in and authorize the CLI — no API key copying required. Detects and installs to **Claude Code**, **Cursor**, **VS Code**, and **Windsurf** — whichever you have installed.
 
-## What it does
-
-```
-Spaceship AI — MCP installer
-
-Installing Spaceship MCP server...
-
-✓ Claude Code
-✓ Cursor
-✓ VS Code
-— Windsurf not detected (skipped)
-
-Spaceship MCP is ready. Restart your IDE if it was open.
-```
-
 ## Install to Cursor
 
 [![Install in Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/en-US/install-mcp?name=Spaceship&config=eyJjb21tYW5kIjoidXZ4IiwiYXJncyI6WyJzcGFjZXNoaXAtbWNwIl19)
