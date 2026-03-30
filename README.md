@@ -32,6 +32,10 @@ Once installed, these tools are available in your AI IDE:
 | `list_executions` | List recent runs with status and duration |
 | `test_agent` | Quick sync test with 15s timeout |
 | `list_tools` | List tools available to attach to agents |
+| `list_orchestrations` | List orchestrations, optionally filtered by project |
+| `get_orchestration` | Get full details of an orchestration including its members |
+| `run_orchestration` | Start an async orchestration run; returns execution_id |
+| `test_orchestration` | Quick sync test of an orchestration with 15s timeout |
 
 ## Manual configuration
 
