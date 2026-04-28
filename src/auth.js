@@ -3,7 +3,7 @@ import { randomBytes } from 'crypto'
 import { execSync } from 'child_process'
 
 const DASHBOARD_URL = process.env.SPACESHIP_BASE_URL || 'https://spaceshipai.io'
-const TIMEOUT_MS = 120_000
+const TIMEOUT_MS = 600_000
 
 function openBrowser(url) {
   try {
@@ -119,6 +119,7 @@ function successHtml() {
     <div class="icon">&#10003;</div>
     <h2>Spaceship CLI authorized</h2>
     <p>You can close this tab and return to your terminal.</p>
+    <p style="margin-top:12px;font-size:12px;color:#555">To run agents, add wallet funds at <a href="${DASHBOARD_URL}/billing" style="color:#00daf3">${DASHBOARD_URL}/billing</a></p>
   </div>
 </body>
 </html>`
